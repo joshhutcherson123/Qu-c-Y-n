@@ -9,15 +9,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="shared.css">
     <style>
-        body{ justify-content: flex-start; padding-top: 40px; padding-bottom: 60px; }
+        body{ justify-content: flex-start; align-items: stretch; margin: 0; padding: 0; }
 
         .letter{
-            width: min(820px, 100%);
-            background: rgba(255, 252, 249, 0.92);
-            border-radius: 18px;
-            padding: clamp(24px, 5vw, 56px);
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(214, 41, 62, 0.18);
+            width: 100%;
+            max-width: none;
+            min-height: 100vh;
+            box-sizing: border-box;
+            background: transparent;
+            border-radius: 0;
+            padding: clamp(24px, 6vw, 80px);
+            box-shadow: none;
+            border: none;
             text-align: left;
             animation: unfold 1s cubic-bezier(.2,.8,.2,1) both;
             transform-origin: top center;
