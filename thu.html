@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lá thư</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Dancing+Script:wght@600;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="shared.css">
+    <style>
+        body{ justify-content: flex-start; align-items: stretch; margin: 0; padding: 0; }
+
+        .letter{
+            width: 100%;
+            max-width: none;
+            min-height: 100vh;
+            box-sizing: border-box;
+            background: transparent;
+            border-radius: 0;
+            padding: clamp(24px, 6vw, 80px);
+            box-shadow: none;
+            border: none;
+            text-align: left;
+            animation: unfold 1s cubic-bezier(.2,.8,.2,1) both;
+            transform-origin: top center;
+        }
+        @keyframes unfold{
+            from{ opacity: 0; transform: perspective(900px) rotateX(-35deg) translateY(-20px); }
+            to{ opacity: 1; transform: none; }
+        }
+
+        .header{
+            font-family: var(--font-script);
+            color: var(--rose);
+            font-size: clamp(34px, 6.5vw, 60px);
+            line-height: 1.2;
+            margin: 0 0 28px;
+            font-weight: 700;
+        }
+        .header::after{
+            content: "";
+            display: block;
+            width: 90px;
+            height: 3px;
+            margin-top: 14px;
+            border-radius: 3px;
+            background: linear-gradient(90deg, var(--rose), transparent);
+        }
+
+        /* các dòng hiện lần lượt, cách nhau 1.6 giây (muốn nhanh/chậm thì đổi số 1.6s) */
+        .letter .reveal{ animation-delay: calc(var(--i, 0) * 1.6s + 0.5s); }
+
+        p{
+            font-size: clamp(20px, 2.3vw, 24px);
+            line-height: 1.85;
+            letter-spacing: 0.05em;
+            color: var(--text);
+            margin: 0 0 20px;
+        }
+
+        /* Phần ký tên cuối thư: font fancy + màu tím hồng nổi bật */
+        .letter .signoff{
+            font-family: 'Pacifico', var(--font-script);
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            color: #a8267f;
+            text-shadow: 0 3px 12px rgba(168, 38, 127, 0.22);
+        }
+        .letter .thanai{
+            font-size: clamp(26px, 4vw, 36px);
+            margin: 36px 0 4px;
+        }
+        .letter .tenlop{
+            font-size: clamp(22px, 3.4vw, 30px);
+            line-height: 1.5;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="letter">
+        <h1 class="header reveal" style="--i:0">Tập thể lớp 11 Anh 1 chúc cô 20/11 vui vẻ ạ &lt;3</h1>
+        <p class="reveal" style="--i:1">Tháng 11 lại về, mang theo những cơn gió se lạnh và không khí ấm áp của ngày Nhà giáo Việt Nam 20/11. Đây là dịp đặc biệt để mỗi học sinh chúng em bày tỏ lòng biết ơn và sự kính trọng đối với những người đã tận tụy dìu dắt mình trên con đường học tập. Nhân ngày lễ ý nghĩa này, em xin gửi đến quý thầy cô những lời chúc tốt đẹp và chân thành nhất.</p>
+        <p class="reveal" style="--i:2">Thầy cô kính mến! Có lẽ trong cuộc đời mỗi người, ai cũng có những người thầy, người cô đáng nhớ. Thầy cô không chỉ dạy chúng em những kiến thức trong sách vở mà còn truyền đạt những bài học quý giá về cuộc sống. Từ những phép toán, bài văn cho đến những kiến thức về thế giới xung quanh, tất cả đều được thầy cô tận tình giảng dạy. Không chỉ vậy, thầy cô còn dạy chúng em biết yêu thương, chia sẻ, sống có trách nhiệm và không ngừng cố gắng để trở thành những người tốt hơn.</p>
+        <p class="reveal" style="--i:3">Em hiểu rằng phía sau mỗi bài giảng là biết bao công sức và sự kiên nhẫn của thầy cô. Có những lúc chúng em chưa ngoan, chưa chăm chỉ hoặc mắc phải những sai lầm khiến thầy cô phải phiền lòng. Thế nhưng, thầy cô vẫn luôn bao dung, nhắc nhở và động viên chúng em tiến bộ. Những lời khuyên, những ánh mắt quan tâm và cả những lần nghiêm khắc của thầy cô đều xuất phát từ mong muốn chúng em trưởng thành hơn. Chính vì vậy, em luôn trân trọng và biết ơn những điều mà thầy cô đã dành cho mình.</p>
+        <p class="reveal" style="--i:4">Nhân ngày Nhà giáo Việt Nam 20/11, em xin kính chúc quý thầy cô luôn mạnh khỏe, hạnh phúc, bình an và tràn đầy nhiệt huyết với nghề. Chúc thầy cô luôn giữ được nụ cười trên môi, có thật nhiều niềm vui trong cuộc sống và gặt hái được nhiều thành công trong sự nghiệp trồng người cao quý. Mong rằng thầy cô sẽ luôn nhận được tình yêu thương, sự kính trọng và những thành quả xứng đáng từ các thế hệ học trò.</p>
+        <p class="reveal" style="--i:5">Cuối thư, em xin gửi đến thầy cô lời cảm ơn sâu sắc nhất. Dù sau này có trưởng thành và đi đến những chân trời mới, em tin rằng những bài học và kỷ niệm dưới mái trường thân yêu sẽ luôn là hành trang quý giá theo em suốt cuộc đời.</p>
+        <p class="reveal" style="--i:6">Chúng em xin kính chúc thầy cô một ngày 20/11 thật vui vẻ và ý nghĩa!</p>
+        <p class="reveal signoff thanai" style="--i:7">Thân ái,</p>
+        <p class="reveal signoff tenlop" style="--i:8">Tập thể lớp 11 Anh 1</p>
+    </div>
+    <script src="shared.js"></script>
+</body>
+</html>
